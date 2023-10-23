@@ -1,7 +1,7 @@
 
 # Sales Prediction Project
 
-![Sales Prediction](images/Revealed_ The role of marketing in sales enablement by Richard Young - SalesPOP!.jpeg)
+![Sales Prediction](images/a.jpeg)
 
 ## Table of Contents
 
