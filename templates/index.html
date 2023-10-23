@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sales Prediction</title>
+    <style>
+        .page {
+            display: none;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .active {
+            display: block;
+        }
+
+        .page2 {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page" id="page1">
+        <h1>Welcome, let's predict sales!</h1>
+        <p>Get ready for the next step...</p>
+    </div>
+
+    <div class="page page2" id="page2">
+        <h1>Sales Prediction</h1>
+        <form id="salesForm" action="/predict" method="post">
+            <div class="input-field">
+                <label for="TV">TV Ads expenditure:</label><br>
+                <input type="text" name="TV" required>
+            </div>
+            <div class="input-field">
+                <label for="Radio">Radio Ads expenditure:</label><br>
+                <input type="text" name="Radio" required>
+            </div>
+            <div class="input-field">
+                <label for="Newspaper">Newspaper Ads expenditure:</label><br>
+                <input type="text" name="Newspaper" required>
+            </div>
+            <input type="submit" value="Predict Sales">
+        </form>
+    </div>
+
+    <script>
+        // Function to switch between pages
+        function switchPage(currentPage, nextPage, delay) {
+            setTimeout(function () {
+                document.getElementById(currentPage).classList.remove('active');
+                document.getElementById(nextPage).classList.add('active');
+            }, delay);
+        }
+
+        // Initially show page 1
+        document.getElementById('page1').classList.add('active');
+
+        // After 5 seconds, switch to page 2
+        switchPage('page1', 'page2', 5000);
+    </script>
+</body>
+
+</html>
