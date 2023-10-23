@@ -1,7 +1,7 @@
 
 # Sales Prediction Project
 
-![Sales Prediction](images/download (1).jpeg.jpeg)
+![Sales Prediction](images/download (1).jpeg)
 
 ## Table of Contents
 
